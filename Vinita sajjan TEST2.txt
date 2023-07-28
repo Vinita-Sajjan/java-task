@@ -1,0 +1,138 @@
+1)In a class multiple methods having same name but differ in no and type of parameter.
+class Hello{
+static void vini(){
+ System.out.println("hello vinita!!!");
+}
+static void vini(int age){
+ System.out.println("hello vinita!!!"+age);
+}
+static void vini(int age,String qualification){
+ System.out.println("hello vinita!!!"+age+qualification);
+}
+public static void main(String[] args){
+  vini();
+  vini(22);
+  vini(22,"Be");
+}
+}
+
+2)*instance variable:scope of the variable is outside side the method and inside the class
+*local variable:scope of the variable is inside the method only where they are defined
+*parameterized variable:variables decleared within the parameter of the method
+*static variable:variables declared with satic variable
+
+class Exvar{
+  String name;//instance variable
+  int age;//instance variable
+  static String place;//static variable
+static void vini(String qualificaton)//parameter variable
+{
+ String fathername;//local variable
+ System.out.println("hello vinita!!!"+qualificaton+fathername);
+}
+
+public static void main(String[] args){
+ System.out.println("invoking main in example");
+vini("Be");
+}
+}
+
+
+4)class Excons{
+     student()
+    {
+    System.out.println("invoking no args constructor");
+    }
+    student(String name)
+    {
+    System.out.println("the student name is"+name);
+    }
+    student(String name,int class)
+    {
+    System.out.println("the student name is"+name+class);
+    }  
+     public static void main(String[] args)
+   {
+    student Student1=new student();
+   student Student2=new student("vinita");
+    student Student3=new student("vinita",10);
+    }
+    }
+
+
+6)class ButterFly{
+	static int legs;
+	static int wings;
+	int noOfAntena;
+	String digestiveTract;
+	
+	public void instanceVarMethod()
+        {
+		System.out.printf("Number of Antena:"+noOfAntena+"digestiveTract:" digestiveTract);
+	}
+	
+	static void staticVarMethod()
+        {
+		System.out.printf("legs:"+legs+ "wings"  wings);
+	}
+	
+	ButterFly(int noOfAntena, String digestiveTract)
+        {
+		this.noOfAntena = noOfAntena;
+		this.digestiveTract = digestiveTract;
+	}
+	
+	static
+        {
+		legs = 6;
+		wings = 4;
+	}
+        public static void main(String[] args)
+        {
+        instanceVarMethod();
+        staticVarMethod();
+        ButterFly(2,1);
+        }
+
+
+
+
+
+
+7)class Chainig{
+    String name;
+    int class;
+     student()
+    {
+    System.out.println("invoking no args constructor");
+    }
+    student(String name)
+    {
+    System.out.println("the student name is"+name);
+     this.name=name;
+    }
+    student(String name,int class)
+    {
+      this(name)
+    System.out.println("the student name is"+name+class);
+     this.class=class
+    }  
+     public static void main(String[] args)
+   {
+    student Student1=new student();
+    student Student2=new student("vinita");
+    student Student3=new student("vinita",10);
+    }
+   }
+
+ 
+    
+
+
+
+
+
+
+
+
+
